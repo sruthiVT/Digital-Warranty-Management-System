@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Register Product</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <h1>Digital Warranty Management System</h1>
+
+    <hr>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="register-product.html">Register Product</a>
+        <a href="claims.html">Claims</a>
+        <a href="dashboard.html">Dashboard</a>
+    </nav>
+
+    <hr>
+
+    <form id="productForm">
+
+        <h3>Register New Product</h3>
+
+        <label for="productName">Product Name</label>
+        <br>
+        <input type="text"
+               id="productName"
+               placeholder="Enter Product Name"
+               required>
+        <br><br>
+
+        <label for="brand">Brand</label>
+        <br>
+        <input type="text"
+               id="brand"
+               placeholder="Enter Brand Name"
+               required>
+        <br><br>
+
+        <label for="serialNumber">Serial Number</label>
+        <br>
+        <input type="text"
+               id="serialNumber"
+               placeholder="Enter Serial Number"
+               required>
+        <br><br>
+
+        <label for="purchaseDate">Purchase Date</label>
+        <br>
+        <input type="date"
+               id="purchaseDate"
+               required>
+        <br><br>
+
+        <label for="warrantyPeriod">Warranty Period (Months)</label>
+        <br>
+        <input type="number"
+               id="warrantyPeriod"
+               placeholder="Enter Warranty Period"
+               required>
+        <br><br>
+
+        <p id="message"></p>
+
+        <button type="submit">
+            REGISTER PRODUCT
+        </button>
+
+    </form>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
