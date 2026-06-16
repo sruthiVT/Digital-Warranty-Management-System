@@ -1,40 +1,100 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Digital Warranty Management System</title>
 
 <link rel="stylesheet" href="css/style.css">
 
 <style>
-body {
-    background-image: url("https://images.unsplash.com/photo-1581091870622-1e7e1e5f3c9a");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-family: Arial, sans-serif;
-    color: white;
+
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color:white;
+    color:#333;
 }
 
-/* Dark overlay for readability */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.6);
-    z-index: -1;
+/* Header */
+
+h1{
+    text-align:center;
+    color:#1f4db8;
+    padding:25px;
+    margin:0;
+    font-size:45px;
 }
 
-nav a {
-    color: white;
-    margin: 10px;
-    text-decoration: none;
-    font-weight: bold;
+/* Navigation */
+
+nav{
+    background:#1f4db8;
+    padding:18px;
+    text-align:center;
 }
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:25px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:yellow;
+}
+
+/* Main Content */
+
+.container{
+    width:85%;
+    margin:auto;
+    margin-top:50px;
+}
+
+.container h2{
+    font-size:42px;
+    color:#222;
+}
+
+.container p{
+    font-size:22px;
+    line-height:35px;
+}
+
+/* Button */
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    background:#1f4db8;
+    color:white;
+    padding:14px 30px;
+    text-decoration:none;
+    border-radius:6px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:#16398c;
+}
+
+/* Footer */
+
+footer{
+    margin-top:120px;
+    background:#1f4db8;
+    color:white;
+    text-align:center;
+    padding:18px;
+    font-size:18px;
+}
+
 </style>
 
 </head>
@@ -42,8 +102,6 @@ nav a {
 <body>
 
 <h1>Digital Warranty Management System</h1>
-
-<hr>
 
 <nav>
 
@@ -59,15 +117,31 @@ nav a {
 
 </nav>
 
-<hr>
+<div class="container">
 
 <h2>Smart Warranty Tracking Made Simple</h2>
 
 <p>
+
 A digital solution to eliminate lost warranty cards and manual tracking.
-Register products, monitor warranty periods, and raise service requests instantly.
-Everything you need — organized, fast, and paperless.
+
+Register products, monitor warranty periods, and raise warranty claims instantly.
+
+Manage all your product warranties in one secure and organized platform.
+
 </p>
+
+<a href="register-product.html" class="btn">
+Register Your Product
+</a>
+
+</div>
+
+<footer>
+
+© 2026 Digital Warranty Management System | Developed by Sruthi Priya V T
+
+</footer>
 
 </body>
 
