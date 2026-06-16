@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Warranty Claims</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<h1>Raise Warranty Claim</h1>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="register-product.html">Register Product</a>
+    <a href="products.html">View Products</a>
+    <a href="claims.html">Claims</a>
+    <a href="dashboard.html">Dashboard</a>
+</nav>
+
+<hr>
+
+<h2>Submit Claim Request</h2>
+
+<form id="claimForm">
+
+    <label>Product Name:</label><br>
+    <input type="text" id="productName" required><br><br>
+
+    <label>Issue Description:</label><br>
+    <textarea id="issue" required></textarea><br><br>
+
+    <label>Claim Date:</label><br>
+    <input type="date" id="claimDate" required><br><br>
+
+    <button type="submit">Submit Claim</button>
+
+</form>
+
+<hr>
+
+<h2>Submitted Claims</h2>
+<div id="claimList"></div>
+
+<script>
+document.getElementById("claimForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let claim = {
+        productName: document.getElementById("productName").value,
+        issue: document.getElementById("issue").value,
+        claimDate: document.getElementById("claimDate").value
+    };
+
+    let claims = JSON.parse(localStorage.getItem("claims")) || [];
+    claims.push(claim);
+    localStorage.setItem("claims", JSON.stringify(claims));
+
+    alert("Claim Submitted Successfully!");
+
+    document.getElementById("claimForm").reset();
+
+    displayClaims();
+});
+
+// Display claims
+function displayClaims() {
+    let claims = JSON.parse(localStorage.getItem("claims")) || [];
+    let output = "";
+
+    claims.forEach((c, index) => {
+        output += `
+            <div style="border:1px solid #ccc; padding:10px; margin:10px;">
+                <h3>Claim ${index + 1}</h3>
+                <p><b>Product:</b> ${c.productName}</p>
+                <p><b>Issue:</b> ${c.issue}</p>
+                <p><b>Date:</b> ${c.claimDate}</p>
+            </div>
+        `;
+    });
+
+    document.getElementById("claimList").innerHTML = output;
+}
+
+// Load claims on page load
+displayClaims();
+</script>
+
+</body>
+</html>
